@@ -25,7 +25,6 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db){
         db.execSQL(CRIAR_TABELA);
-        inserirTarefasIniciais(db);
     }
 
     @Override
@@ -33,25 +32,4 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS tarefas");
         onCreate(db);
     }
-
-    public void inserirTarefasIniciais(SQLiteDatabase db) {
-        // Inserindo 20 tarefas iniciais
-        for (int i = 1; i <= 20; i++) {
-            String nome = "Tarefa " + i;
-            String descricao = "Descrição da Tarefa " + i;
-            String prazo = "2024-09-" + (i < 10 ? "0" + i : i);
-            String prioridade;
-            if (i % 3 == 0) {
-                prioridade = "Alta";
-            } else if (i % 3 == 1) {
-                prioridade = "Baixa";
-            } else {
-                prioridade = "Média";
-            }
-
-            db.execSQL("INSERT INTO tarefas (nome, descricao, prazo, prioridade) " +
-                    "VALUES ('" + nome + "', '" + descricao + "', '" + prazo + "', '" + prioridade + "')");
-        }
-    }
-
 }

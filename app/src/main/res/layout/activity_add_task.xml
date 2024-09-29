@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graphite"
+    tools:context=".AddTaskActivity">
+
+    <TextView
+        android:id="@+id/activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_graphite"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/add_task"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_list_fields"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_title">
+
+        <TextView
+            android:id="@+id/tx_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/task_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_graphite"
+            android:hint="@string/task_title_hint"
+            android:inputType="text"
+            android:focusable="true"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tx_task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/task_description"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_graphite"
+            android:hint="@string/task_description_hint"
+            android:inputType="text"
+            android:focusable="true"
+            android:clickable="true"
+            android:minHeight="100dp"
+            android:padding="10dp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tx_task_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/task_deadline"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_task_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_graphite"
+            android:hint="@string/task_deadline_hint"
+            android:inputType="date"
+            android:focusable="true"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tx_task_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/task_priority"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_graphite"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_list_fields"
+        app:layout_constraintVertical_bias="0.453">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:padding="12dp"
+            android:text="@string/cancel"
+            android:textColor="@color/gray" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:padding="12dp"
+            android:text="@string/submit"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,13 @@
 package br.com.senac.taskmaster;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -18,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TarefaAdapter tarefaAdapter;
     private TarefaDAO tarefaDAO;
     private List<Tarefa> listaDeTarefas;
+    private FloatingActionButton adicionarTarefa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,25 @@ public class MainActivity extends AppCompatActivity {
 
         tarefaDAO = new TarefaDAO(this);
 
+        tarefaDAO.inserirTarefasIniciais();
+
         listaDeTarefas = tarefaDAO.buscarTodasTarefas();
 
         tarefaAdapter = new TarefaAdapter(listaDeTarefas);
         recyclerView.setAdapter(tarefaAdapter);
+
+        adicionarTarefa = findViewById(R.id.floatingActionButton);
+
+        adicionarTarefa.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, AddTaskActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    protected void onResume() {
+        super.onResume();
+        // Recarrega as tarefas sempre que a Activity for retomada
+        listaDeTarefas = tarefaDAO.buscarTodasTarefas();
+        tarefaAdapter.updateTarefas(listaDeTarefas);  // Atualiza a lista de tarefas no adaptador
     }
 }

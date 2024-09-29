@@ -39,6 +39,11 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         return listaDeTarefas.size();
     }
 
+    public void updateTarefas(List<Tarefa> novasTarefas) {
+        this.listaDeTarefas = novasTarefas;
+        notifyDataSetChanged();
+    }
+
     public static class TarefaViewHolder extends RecyclerView.ViewHolder {
         TextView nome, descricao, prazo, prioridade;
 

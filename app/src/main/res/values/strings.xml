@@ -1,21 +1,18 @@
 <resources>
     <string name="app_name">TaskMaster</string>
-    <string name="task_list_title">TaskMaster</string>
-    <string name="task_complete_ui_design">Complete UI Design</string>
-    <string name="task_fix_bugs">Fix Bugs</string>
-    <string name="task_write_documentation">Write Documentation</string>
-    <string name="in_progress">In Progress</string>
-    <string name="task_deadline">Deadline</string>
-    <string name="priority">Priority</string>
-    <string name="priority_high">High</string>
-    <string name="priority_medium">Medium</string>
-    <string name="priority_low">Low</string>
-    <string name="add_task_title">Add Task</string>
-    <string name="task_title">Task Title</string>
-    <string name="task_description">Description</string>
+    <string name="add_task">Adicionar Tarefa</string>
+    <string name="task_title">Nome da Tarefa</string>
+    <string name="task_title_hint">Digite o nome da tarefa</string>
+    <string name="task_description">Descrição</string>
+    <string name="task_description_hint">Digite a descrição da tarefa</string>
+    <string name="task_deadline">Prazo</string>
     <string name="task_deadline_hint">YYYY-MM-DD</string>
-    <string name="priority_level">Priority Level</string>
-    <string name="submit">Submit</string>
-    <string name="cancel">Cancel</string>
-    <string name="add_task">Add Task</string>
+    <string name="task_priority">Prioridade</string>
+    <string name="submit">Adicionar</string>
+    <string name="cancel">Cancelar</string>
+    <string-array name="priority_array">
+        <item>Baixa</item>
+        <item>Normal</item>
+        <item>Alta</item>
+    </string-array>
 </resources>
