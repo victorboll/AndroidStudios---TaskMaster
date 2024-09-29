@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">TaskMaster</string>
+    <string name="task_list_title">TaskMaster</string>
+    <string name="task_complete_ui_design">Complete UI Design</string>
+    <string name="task_fix_bugs">Fix Bugs</string>
+    <string name="task_write_documentation">Write Documentation</string>
+    <string name="in_progress">In Progress</string>
+    <string name="task_deadline">Deadline</string>
+    <string name="priority">Priority</string>
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+    <string name="add_task_title">Add Task</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_deadline_hint">YYYY-MM-DD</string>
+    <string name="priority_level">Priority Level</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_task">Add Task</string>
 </resources>
