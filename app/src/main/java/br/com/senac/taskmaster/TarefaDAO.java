@@ -49,6 +49,8 @@ public class TarefaDAO {
 
         // Insere a tarefa no banco de dados
         db.insert("tarefas", null, valores);
+
+        db.close();
     }
 
     public void inserirTarefasIniciais() {
@@ -71,6 +73,8 @@ public class TarefaDAO {
 
             db.insert("tarefas", null, valores);
         }
+
+        db.close();
     }
 
 }

@@ -29,7 +29,6 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     public void onBindViewHolder(@NonNull TarefaViewHolder holder, int position) {
         Tarefa tarefa = listaDeTarefas.get(position);
         holder.nome.setText(tarefa.getNome());
-        holder.descricao.setText(tarefa.getDescricao());
         holder.prazo.setText(tarefa.getPrazo());
         holder.prioridade.setText(tarefa.getPrioridade());
     }
@@ -50,7 +49,6 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         public TarefaViewHolder(@NonNull View itemDaView){
             super(itemDaView);
             nome = itemDaView.findViewById(R.id.task_name);
-            descricao = itemDaView.findViewById(R.id.task_description);
             prazo = itemDaView.findViewById(R.id.task_deadline);
             prioridade = itemDaView.findViewById(R.id.task_priority);
         }
