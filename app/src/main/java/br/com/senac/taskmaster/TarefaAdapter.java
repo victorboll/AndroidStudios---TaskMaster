@@ -44,7 +44,7 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     }
 
     public static class TarefaViewHolder extends RecyclerView.ViewHolder {
-        TextView nome, descricao, prazo, prioridade;
+        TextView nome, prazo, prioridade;
 
         public TarefaViewHolder(@NonNull View itemDaView){
             super(itemDaView);

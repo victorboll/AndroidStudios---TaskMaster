@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         tarefaDAO.inserirTarefasIniciais();
 
         listaDeTarefas = tarefaDAO.buscarTodasTarefas();
+        listaDeTarefas = tarefaDAO.ordenarTarefasPorData(listaDeTarefas);
 
         tarefaAdapter = new TarefaAdapter(listaDeTarefas);
         recyclerView.setAdapter(tarefaAdapter);
@@ -49,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
         // Recarrega as tarefas sempre que a Activity for retomada
         listaDeTarefas = tarefaDAO.buscarTodasTarefas();
         tarefaAdapter.updateTarefas(listaDeTarefas);  // Atualiza a lista de tarefas no adaptador
+        listaDeTarefas = tarefaDAO.ordenarTarefasPorData(listaDeTarefas);
     }
 }

@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TarefaDAO {
@@ -75,6 +77,17 @@ public class TarefaDAO {
         }
 
         db.close();
+    }
+
+    public List<Tarefa> ordenarTarefasPorData(List<Tarefa> tarefas) {
+        Collections.sort(tarefas, new Comparator<Tarefa>() {
+            @Override
+            public int compare(Tarefa t1, Tarefa t2) {
+                return t1.getPrazo().compareTo(t2.getPrazo());
+            }
+        });
+
+        return tarefas;
     }
 
 }
