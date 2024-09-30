@@ -31,6 +31,7 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         holder.nome.setText(tarefa.getNome());
         holder.prazo.setText(tarefa.getPrazo());
         holder.prioridade.setText(tarefa.getPrioridade());
+        holder.status.setText(tarefa.getStatus());
     }
 
     @Override
@@ -44,13 +45,14 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     }
 
     public static class TarefaViewHolder extends RecyclerView.ViewHolder {
-        TextView nome, prazo, prioridade;
+        TextView nome, prazo, prioridade, status;
 
         public TarefaViewHolder(@NonNull View itemDaView){
             super(itemDaView);
             nome = itemDaView.findViewById(R.id.task_name);
             prazo = itemDaView.findViewById(R.id.task_deadline);
             prioridade = itemDaView.findViewById(R.id.task_priority);
+            status = itemDaView.findViewById(R.id.task_status);
         }
     }
 }

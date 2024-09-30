@@ -15,7 +15,8 @@ public class DBHandler extends SQLiteOpenHelper {
                     "nome TEXT NOT NULL, " +
                     "descricao TEXT, " +
                     "prazo TEXT, " +
-                    "prioridade TEXT " +
+                    "prioridade TEXT, " +
+                    "status TEXT " +
                     ")";
 
     public DBHandler(Context context){

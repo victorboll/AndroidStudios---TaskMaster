@@ -32,8 +32,9 @@ public class TarefaDAO {
                 String descricao = cursor.getString(cursor.getColumnIndex("descricao"));
                 String prazo = cursor.getString(cursor.getColumnIndex("prazo"));
                 String prioridade = cursor.getString(cursor.getColumnIndex("prioridade"));
+                String status = cursor.getString(cursor.getColumnIndex("status"));
 
-                tarefas.add(new Tarefa(id, nome, descricao, prazo, prioridade));
+                tarefas.add(new Tarefa(id, nome, descricao, prazo, prioridade, status));
             } while (cursor.moveToNext());
         }
 
@@ -48,6 +49,8 @@ public class TarefaDAO {
         valores.put("descricao", descricao);
         valores.put("prazo", prazo);
         valores.put("prioridade", prioridade);
+        valores.put("status", "Em Progresso");
+
 
         // Insere a tarefa no banco de dados
         db.insert("tarefas", null, valores);
@@ -72,6 +75,8 @@ public class TarefaDAO {
                 prioridade = "Normal";
             }
             valores.put("prioridade", prioridade);
+
+            valores.put("status", "Em Progresso");
 
             db.insert("tarefas", null, valores);
         }

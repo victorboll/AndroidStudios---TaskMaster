@@ -6,13 +6,15 @@ public class Tarefa {
     private String descricao;
     private String prazo;
     private String prioridade;
+    private String status;
 
-    public Tarefa(int id, String nome, String descricao, String prazo, String prioridade) {
+    public Tarefa(int id, String nome, String descricao, String prazo, String prioridade, String status) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.prazo = prazo;
         this.prioridade = prioridade;
+        this.status = status;
     }
 
     public int getId() {
@@ -48,5 +50,12 @@ public class Tarefa {
     }
     public void setPrioridade(String prioridade) {
         this.prioridade = prioridade;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
