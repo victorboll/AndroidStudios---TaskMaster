@@ -47,9 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
-        // Recarrega as tarefas sempre que a Activity for retomada
         listaDeTarefas = tarefaDAO.buscarTodasTarefas();
-        tarefaAdapter.updateTarefas(listaDeTarefas);  // Atualiza a lista de tarefas no adaptador
         listaDeTarefas = tarefaDAO.ordenarTarefasPorData(listaDeTarefas);
+        tarefaAdapter.updateTarefas(listaDeTarefas);
     }
 }
