@@ -5,39 +5,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/custom_background">
 
+    <!-- Retângulo pequeno com bordas arredondadas (verde) -->
+    <View
+        android:id="@+id/status_indicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/green_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Nome da tarefa -->
     <TextView
         android:id="@+id/task_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="Nome da Tarefa"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/status_indicator"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Descrição da tarefa -->
-    <TextView
-        android:id="@+id/task_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        tools:text="Descrição da tarefa"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/task_name"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/task_status"
+        app:layout_constraintHorizontal_chainStyle="packed" />
 
     <!-- Prazo da tarefa -->
     <TextView
         android:id="@+id/task_deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Prazo: 2024-09-30"
+        tools:text="Prazo: 2023-11-05"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/task_description" />
+        app:layout_constraintStart_toStartOf="@id/task_name"
+        app:layout_constraintTop_toBottomOf="@id/task_name" />
 
     <!-- Prioridade da tarefa -->
     <TextView
@@ -45,8 +52,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Prioridade: Alta"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/task_deadline"
+        app:layout_constraintTop_toBottomOf="@id/task_deadline" />
+
+    <!-- Status (parecendo um botão) -->
+    <TextView
+        android:id="@+id/task_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Em progresso"
+        android:padding="10dp"
+        android:background="@drawable/green_button"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/task_description" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/task_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

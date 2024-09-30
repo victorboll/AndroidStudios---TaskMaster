@@ -47,7 +47,7 @@
             android:id="@+id/et_task_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_graphite"
+            android:background="@drawable/custom_background"
             android:hint="@string/task_title_hint"
             android:inputType="text"
             android:focusable="true"
@@ -56,7 +56,8 @@
             android:padding="10dp"
             android:textColor="@color/gray"
             android:textColorHint="@color/gray"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            style="@style/Widget.AppCompat.EditText"/>
 
         <TextView
             android:id="@+id/tx_task_description"
@@ -71,7 +72,7 @@
             android:id="@+id/et_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_graphite"
+            android:background="@drawable/custom_background"
             android:hint="@string/task_description_hint"
             android:inputType="text"
             android:focusable="true"
@@ -95,7 +96,7 @@
             android:id="@+id/et_task_deadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_graphite"
+            android:background="@drawable/custom_background"
             android:hint="@string/task_deadline_hint"
             android:inputType="date"
             android:focusable="true"
@@ -119,7 +120,7 @@
             android:id="@+id/spinner_priority"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_graphite"
+            android:background="@drawable/custom_background"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/gray"
