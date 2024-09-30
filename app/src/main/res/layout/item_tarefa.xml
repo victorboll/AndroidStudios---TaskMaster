@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:layout_margin="16dp"
+    android:layout_margin="8dp"
     android:background="@drawable/custom_background">
 
     <!-- Retângulo pequeno com bordas arredondadas (verde) -->
