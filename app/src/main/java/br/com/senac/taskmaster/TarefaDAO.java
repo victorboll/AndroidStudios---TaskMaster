@@ -79,7 +79,7 @@ public class TarefaDAO {
         Collections.sort(tarefas, new Comparator<Tarefa>() {
             @Override
             public int compare(Tarefa t1, Tarefa t2) {
-                return t1.getPrazo().compareTo(t2.getPrazo());
+                return t2.getPrazo().compareTo(t1.getPrazo());
             }
         });
 
